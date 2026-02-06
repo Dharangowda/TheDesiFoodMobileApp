@@ -1,5 +1,4 @@
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Image } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
 import { Colors } from '../../constants/theme';
 import { MOCK_CATEGORIES } from '../../constants/mockData';
 
@@ -12,9 +11,12 @@ export function CategoryHeader() {
         >
             {MOCK_CATEGORIES.map((cat) => (
                 <TouchableOpacity key={cat.id} style={styles.item}>
-                    <View style={styles.iconContainer}>
-                        {/* Using Ionicons as placeholder, in real app use Image */}
-                        <Ionicons name={cat.icon as any} size={24} color={Colors.foreground} />
+                    <View style={styles.imageContainer}>
+                        <Image 
+                            source={cat.image} 
+                            style={styles.image}
+                            resizeMode="cover"
+                        />
                     </View>
                     <Text style={styles.label}>{cat.name}</Text>
                 </TouchableOpacity>
@@ -33,22 +35,25 @@ const styles = StyleSheet.create({
         marginHorizontal: 10,
         width: 60,
     },
-    iconContainer: {
+    imageContainer: {
         width: 50,
         height: 50,
         borderRadius: 12,
         backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
         marginBottom: 6,
         borderWidth: 1,
         borderColor: '#f0f0f0',
+        overflow: 'hidden',
         // Shadow
         shadowColor: "#000",
         shadowOffset: { width: 0, height: 1 },
         shadowOpacity: 0.1,
         shadowRadius: 2,
         elevation: 2,
+    },
+    image: {
+        width: '100%',
+        height: '100%',
     },
     label: {
         fontSize: 11,
