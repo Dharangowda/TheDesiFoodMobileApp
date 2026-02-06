@@ -1,8 +1,11 @@
 import { View, Text, StyleSheet, ScrollView, TouchableOpacity, Image } from 'react-native';
+import { useRouter } from 'expo-router';
 import { Colors } from '../../constants/theme';
 import { MOCK_CATEGORIES } from '../../constants/mockData';
 
 export function CategoryHeader() {
+    const router = useRouter();
+
     return (
         <ScrollView
             horizontal
@@ -10,7 +13,11 @@ export function CategoryHeader() {
             contentContainerStyle={styles.container}
         >
             {MOCK_CATEGORIES.map((cat) => (
-                <TouchableOpacity key={cat.id} style={styles.item}>
+                <TouchableOpacity 
+                    key={cat.id} 
+                    style={styles.item}
+                    onPress={() => router.push(`/categories/${cat.name}`)}
+                >
                     <View style={styles.imageContainer}>
                         <Image 
                             source={cat.image} 
