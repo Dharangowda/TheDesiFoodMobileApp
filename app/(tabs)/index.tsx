@@ -1,12 +1,15 @@
 import { View, Text, StyleSheet, ScrollView, Image, TouchableOpacity, SafeAreaView, Dimensions } from 'react-native';
+import { useState } from 'react';
 import { Stack, useRouter } from 'expo-router';
 import { Colors } from '../../constants/theme';
 import { SearchBar } from '../../components/home/SearchBar';
 import { CategoryHeader } from '../../components/home/CategoryHeader';
+import { TrustBanner } from '../../components/home/TrustBanner';
 import { ProductCard } from '../../components/home/ProductCard';
 import { HeroBanner } from '../../components/home/HeroBanner';
 import { PromoBanners } from '../../components/home/PromoBanners';
 import { SectionHeader } from '../../components/home/SectionHeader';
+import { CategoryDrawer } from '../../components/navigation/CategoryDrawer';
 import { MOCK_PRODUCTS, MOCK_HIGHLIGHTS, MOCK_DEALS, MOCK_BRANDS, MOCK_TESTIMONIALS } from '../../constants/mockData';
 import { Ionicons } from '@expo/vector-icons';
 
@@ -14,21 +17,33 @@ const { width } = Dimensions.get('window');
 
 export default function HomeScreen() {
     const router = useRouter();
+    const [drawerVisible, setDrawerVisible] = useState(false);
+    
     return (
         <SafeAreaView style={styles.safeArea}>
             <Stack.Screen options={{ headerShown: false }} />
 
             {/* Header */}
             <View style={styles.header}>
-                <View style={styles.logoRow}>
-                <View style={styles.logoContainer}>
-                    <Image 
-                        source={require('../../assets/images/logo-desifood.png')} 
-                        style={styles.logoImage}
-                        resizeMode="contain"
-                    />
-                </View>
+                <View style={styles.headerRow}>
+                    {/* Hamburger Menu */}
+                    <TouchableOpacity 
+                        style={styles.hamburgerButton}
+                        onPress={() => setDrawerVisible(true)}
+                    >
+                        <Ionicons name="menu" size={28} color={Colors.foreground} />
+                    </TouchableOpacity>
 
+                    {/* Logo - Centered */}
+                    <View style={styles.logoContainer}>
+                        <Image 
+                            source={require('../../assets/images/logo-desifood.png')} 
+                            style={styles.logoImage}
+                            resizeMode="contain"
+                        />
+                    </View>
+
+                    {/* Right Actions */}
                     <View style={styles.headerActions}>
                         <TouchableOpacity style={styles.iconBtn}>
                             <Ionicons name="notifications-outline" size={24} color={Colors.foreground} />
@@ -38,10 +53,24 @@ export default function HomeScreen() {
                 <SearchBar />
             </View>
 
+            {/* Category Drawer */}
+            <CategoryDrawer
+                visible={drawerVisible}
+                onClose={() => setDrawerVisible(false)}
+                onNavigate={(category, subcategory, item) => {
+                    console.log('Navigate to:', category, subcategory, item);
+                    // Navigate to appropriate page
+                    router.push(`/categories/${category}`);
+                }}
+            />
+
             <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
 
                 {/* Categories */}
                 <CategoryHeader />
+
+                {/* Trust Banner */}
+                <TrustBanner />
 
                 {/* Hero Banner */}
                 <HeroBanner />
@@ -411,19 +440,24 @@ const styles = StyleSheet.create({
         borderBottomWidth: 1,
         borderBottomColor: '#f0f0f0',
     },
-    logoRow: {
+    headerRow: {
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
         marginBottom: 8,
     },
+    hamburgerButton: {
+        padding: 4,
+        width: 40,
+    },
     logoContainer: {
-        height: 40,
-        width: 120,
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
     },
     logoImage: {
-        width: '100%',
-        height: '100%',
+        width: 120,
+        height: 40,
     },
     headerActions: {
         flexDirection: 'row',

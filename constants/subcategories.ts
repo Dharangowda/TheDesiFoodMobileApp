@@ -25,11 +25,11 @@ export const SUBCATEGORIES = {
             id: 'ghee-oil',
             name: 'Ghee and Oil',
             items: [
-                'A2 Cow Ghee',
+                'A2 Cow ghee',
                 'A2 Buffalo Ghee',
                 'Buffalo Ghee',
                 'Ghee',
-                'Cow Ghee',
+                'Cow ghee',
                 'Oil',
                 'Cold Pressed Oil'
             ]
@@ -46,8 +46,8 @@ export const SUBCATEGORIES = {
                 'Browntop Millet',
                 'Sorghum',
                 'Combo Millets',
-                'Millets Sweets',
-                'Millets Snacks'
+                'Millets sweets',
+                'Millets snacks'
             ]
         },
         {
@@ -69,7 +69,7 @@ export const SUBCATEGORIES = {
             items: [
                 'Instant Coffee',
                 'Ground Coffee',
-                'Coffee Substitute'
+                'Coffee substitute'
             ]
         },
         {
@@ -79,7 +79,7 @@ export const SUBCATEGORIES = {
                 'Leaf and Dust Tea',
                 'Exotic and Flavoured Tea',
                 'Green Tea',
-                'Tea Bags'
+                'Tea bags'
             ]
         },
         {
@@ -87,7 +87,9 @@ export const SUBCATEGORIES = {
             name: 'Beverages',
             items: [
                 'Health Drink',
-                'Instant Drink'
+                'Instant Drink',
+                'Herbal Drink',
+                'Milk Powder'
             ]
         },
         {
@@ -95,15 +97,17 @@ export const SUBCATEGORIES = {
             name: 'Pickles',
             items: [
                 'North Indian Veg Pickles',
-                'South Indian Veg Pickles'
+                'South Indian Veg Pickles',
+                'South Indian Non-Veg Pickles'
             ]
         },
         {
-            id: 'sugar-jaggery',
+            id: 'sugar-salt-jaggery',
             name: 'Sugar, Salt and Jaggery',
             items: [
                 'Sugar',
-                'Salt'
+                'Salt',
+                'Jaggery'
             ]
         },
         {
@@ -115,10 +119,13 @@ export const SUBCATEGORIES = {
         },
         {
             id: 'ready-to-eat',
-            name: 'Ready to Eat and Cook',
+            name: 'Ready to eat and Cook',
             items: [
                 'Ready Meal',
-                'Instant and Breakfast Mix'
+                'Instant and Breakfast Mix',
+                'Pasta & Noodles',
+                'Soup',
+                'Flavoured'
             ]
         },
         {
@@ -126,7 +133,10 @@ export const SUBCATEGORIES = {
             name: 'Dried Fruits, Nuts and Seeds',
             items: [
                 'Nuts',
-                'Dates'
+                'Dates',
+                'Trail mix',
+                'Seeds',
+                'Gifting'
             ]
         },
         {
@@ -134,7 +144,19 @@ export const SUBCATEGORIES = {
             name: 'Staples',
             items: [
                 'Pulses',
-                'Organic Pulses'
+                'Organic Pulses',
+                'Rice',
+                'Wholegrain'
+            ]
+        },
+        {
+            id: 'flour',
+            name: 'Flour',
+            items: [
+                'Atta',
+                'Curated Flour',
+                'Fasting Flour',
+                'Jackfruit Flour'
             ]
         }
     ],
@@ -143,62 +165,57 @@ export const SUBCATEGORIES = {
             id: 'ayurveda',
             name: 'Ayurveda',
             items: [
-                'Ayurvedic Supplements',
-                'Herbal Powders',
-                'Ayurvedic Oils',
-                'Chyawanprash'
+                'Patanjali',
+                'Kottakkal Ayurveda',
+                'Himalaya',
+                'Isha Life',
+                'Organic India',
+                'Dhootapapeshwar',
+                'Baidyanath',
+                'Dabur',
+                'Sri Sri Tattva',
+                'Vaidyaratnam',
+                'Zandu',
+                'Kerala Ayurveda',
+                'Nirogam',
+                'Santulan Ayurveda',
+                'Kapiva',
+                'Maharishi'
             ]
         },
         {
-            id: 'supplements',
-            name: 'Supplements',
+            id: 'homeopathy',
+            name: 'Homeopathy',
             items: [
-                'Vitamins',
-                'Minerals',
-                'Protein Supplements',
-                'Omega-3'
+                'SBL Homeopathy',
+                'Dr. Reckeweg',
+                'Dr. Willmar Schwabe India',
+                'Wheezal',
+                'Bakson\'s'
             ]
         },
         {
-            id: 'herbal',
-            name: 'Herbal',
+            id: 'unani',
+            name: 'Unani',
             items: [
-                'Herbal Tea',
-                'Herbal Extracts',
-                'Herbal Capsules'
-            ]
-        },
-        {
-            id: 'immunity',
-            name: 'Immunity',
-            items: [
-                'Immunity Boosters',
-                'Giloy',
-                'Tulsi',
-                'Ashwagandha'
-            ]
-        },
-        {
-            id: 'fitness',
-            name: 'Fitness',
-            items: [
-                'Protein Powder',
-                'Energy Bars',
-                'Pre-Workout',
-                'Post-Workout'
+                'Hamdard',
+                'Rex Remedies'
             ]
         }
     ],
     'Beauty': [
         {
-            id: 'skincare',
-            name: 'Skincare',
+            id: 'face-makeup-care',
+            name: 'Face Makeup & Care',
             items: [
-                'Face Wash',
-                'Face Cream',
-                'Face Serum',
-                'Face Masks',
-                'Sunscreen'
+                'Face Care',
+                'Eye Makeup',
+                'Lip Makeup',
+                'Lip Care',
+                'Mask',
+                'Under Eye & Serum',
+                'Makeup Remover',
+                'Sindoor'
             ]
         },
         {
@@ -206,31 +223,103 @@ export const SUBCATEGORIES = {
             name: 'Haircare',
             items: [
                 'Shampoo',
-                'Conditioner',
-                'Hair Oil',
-                'Hair Serum',
-                'Hair Masks'
+                'Conditioners',
+                'Hair Serums',
+                'Hair Mask',
+                'Hair Cleanser',
+                'Hair supplements',
+                'Hair Colour',
+                'Hair Combo'
             ]
         },
         {
-            id: 'makeup',
-            name: 'Makeup',
+            id: 'skin-care',
+            name: 'Skin care',
             items: [
-                'Lipstick',
-                'Foundation',
-                'Kajal',
-                'Eyeliner',
-                'Compact'
+                'Sunscreen',
+                'Moisturizer',
+                'Cleanser',
+                'Serums & Essence',
+                'Face Wash',
+                'Face Pack',
+                'Cream'
             ]
         },
         {
-            id: 'personal-care',
-            name: 'Personal Care',
+            id: 'bath-body',
+            name: 'Bath & Body',
             items: [
-                'Body Wash',
+                'Body Oil',
+                'Massage Oil',
                 'Body Lotion',
-                'Deodorant',
-                'Soap'
+                'Mist & Perfume',
+                'Powder',
+                'Body Wash',
+                'Bath Scrubs',
+                'Soap & Gels',
+                'Body Cream'
+            ]
+        },
+        {
+            id: 'men-grooming',
+            name: 'Men\'s Grooming',
+            items: [
+                'Beard Care',
+                'Men Body Care',
+                'Men Skin Care',
+                'Shaving Cream, Foams & Gel',
+                'Men Hair Care'
+            ]
+        },
+        {
+            id: 'herwellness',
+            name: 'HerWellness',
+            items: [
+                'Sanitary pads',
+                'Intimate care and wash',
+                'Stretch Mark Cream & Oil',
+                'Breast firming Cream'
+            ]
+        },
+        {
+            id: 'shop-by-hair-concern',
+            name: 'Shop by Hair Concern',
+            items: [
+                'Hair Fall & Thinning',
+                'Dry & Frizzy Hair',
+                'Dandruff'
+            ]
+        },
+        {
+            id: 'shop-by-need',
+            name: 'Shop by Need',
+            items: [
+                'Hair Colors',
+                'Under Eye Creams and Serums',
+                'Anti Wrinkle Creams',
+                'Hair Removal',
+                'Pain Relief'
+            ]
+        },
+        {
+            id: 'shop-by-concern',
+            name: 'Shop by Concern',
+            items: [
+                'Hair Growth',
+                'Anti Acne',
+                'Anti Ageing',
+                'Tan Removal'
+            ]
+        },
+        {
+            id: 'shop-by-brand',
+            name: 'Shop by Brand',
+            items: [
+                'Shahnaz Husain',
+                'Dot & Key',
+                'Minimalist',
+                'L\'oreal Professional',
+                'Mamaearth'
             ]
         }
     ],
@@ -239,62 +328,96 @@ export const SUBCATEGORIES = {
             id: 'baby-care',
             name: 'Baby Care',
             items: [
-                'Baby Soap',
-                'Baby Shampoo',
-                'Baby Lotion',
-                'Baby Oil',
-                'Diapers'
+                'Baby Massage Oil',
+                'Baby Shampoo and Conditioner',
+                'Baby Wash and Soap',
+                'Baby Cream and Lotion',
+                'Baby Kajal',
+                'Baby Powder',
+                'Baby Hair Oil',
+                'Baby Essential Kit'
             ]
         },
         {
-            id: 'kids-food',
-            name: 'Kids Food',
+            id: 'baby-health',
+            name: 'Baby Health',
             items: [
-                'Baby Food',
-                'Kids Snacks',
-                'Health Drinks'
+                'Medical Care',
+                'Mosquito Repellent',
+                'Baby Oral Care'
             ]
         },
         {
-            id: 'toys',
-            name: 'Toys & Games',
+            id: 'diapers',
+            name: 'Diapers',
             items: [
-                'Educational Toys',
-                'Board Games',
-                'Puzzles',
-                'Outdoor Toys'
+                'Diaper Rash Cream',
+                'Cloth Diapers',
+                'Baby Wipes'
+            ]
+        },
+        {
+            id: 'toys-games',
+            name: 'Toys and Games',
+            items: [
+                'Infant Toys',
+                'Baby Teethers',
+                'Learning and Educational Toys',
+                'Puzzles'
             ]
         }
     ],
     'Home': [
         {
-            id: 'kitchen',
-            name: 'Kitchen',
+            id: 'furnishing',
+            name: 'Furnishing',
             items: [
-                'Cookware',
-                'Utensils',
-                'Storage Containers',
-                'Kitchen Tools'
+                'Table Runners',
+                'Bedsheet'
             ]
         },
         {
-            id: 'appliances',
-            name: 'Appliances',
+            id: 'home-decor',
+            name: 'Home Decor',
+            items: [
+                'Rangoli',
+                'Toran',
+                'Diya',
+                'Lights'
+            ]
+        },
+        {
+            id: 'kitchen-cookware',
+            name: 'Kitchen Cookware',
+            items: [
+                'Pressure Cooker',
+                'Fry Pans'
+            ]
+        },
+        {
+            id: 'electrical-appliances',
+            name: 'Electrical Appliances',
             items: [
                 'Mixer Grinder',
-                'Pressure Cooker',
-                'Electric Kettle'
+                'Roti Maker',
+                'Induction',
+                'Blender',
+                'Iron',
+                'Hair Straightener'
             ]
         },
         {
-            id: 'decor',
-            name: 'Decor',
+            id: 'tableware-dinnerware',
+            name: 'Tableware and Dinnerware',
             items: [
-                'Wall Hangings',
-                'Idols',
-                'Lamps',
-                'Rangoli'
+                'Brass Items',
+                'Panchapathira'
             ]
+        },
+        {
+            id: 'copper-items',
+            name: 'Copper Items',
+            items: []
         }
     ],
     'Fashion': [
